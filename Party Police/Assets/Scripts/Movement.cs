@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 {
     public float MovementSpeed = 10.0f;
     public KeyCode MoveRight = KeyCode.D;
-    public KeyCode MoveLeft = KeyCode.Q;
+    public KeyCode MoveLeft = KeyCode.A;
     public KeyCode MoveUp = KeyCode.W;
     public KeyCode MoveDown = KeyCode.S;
 
