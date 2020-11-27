@@ -3,6 +3,8 @@
 public class CameraFollow : MonoBehaviour
 {
     private Transform playerPos;
+    [SerializeField]
+    float cameraDistance = -2f;
 
     void Awake()
     {
@@ -11,6 +13,6 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3 (playerPos.position.x, playerPos.position.y, -2f);
+        transform.position = new Vector3 (playerPos.position.x, playerPos.position.y, cameraDistance);
     }
 }
