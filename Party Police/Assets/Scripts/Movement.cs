@@ -5,39 +5,25 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float MovementSpeed = 10.0f;
-    public KeyCode MoveRight = KeyCode.D;
-    public KeyCode MoveLeft = KeyCode.A;
-    public KeyCode MoveUp = KeyCode.W;
-    public KeyCode MoveDown = KeyCode.S;
+
+    public Rigidbody2D rb;
+
+    Vector2 movement;
 
 
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(MoveRight))
-        {
-            gameObject.transform.position += new Vector3(1.0f * MovementSpeed, 0.0f, 0.0f) * Time.deltaTime;
-        }
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+    }
 
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(MoveLeft))
-        {
-            gameObject.transform.position -= new Vector3(1.0f * MovementSpeed, 0.0f, 0.0f) * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(MoveUp))
-        {
-            gameObject.transform.position += new Vector3(0.0f, 1.0f * MovementSpeed, 0.0f) * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(MoveDown))
-        {
-            gameObject.transform.position -= new Vector3(0.0f, 1.0f * MovementSpeed, 0.0f) * Time.deltaTime;
-        }
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + movement.normalized * MovementSpeed * Time.fixedDeltaTime);
     }
 }
