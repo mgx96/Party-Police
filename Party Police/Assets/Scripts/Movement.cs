@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
 
     Vector2 movement;
 
+    public bool canMove = true;
 
     void Start()
     {
@@ -18,8 +19,18 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        if(!canMove)
+        {
+            movement.x = 0;
+            movement.y = 0;
+        }
+        else
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
+        //movement.x = Input.GetAxisRaw("Horizontal");
+        //movement.y = Input.GetAxisRaw("Vertical");
     }
 
     void FixedUpdate()
