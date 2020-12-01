@@ -32,6 +32,11 @@ public class NPC : MonoBehaviour
         isTalking = false;
     }
 
+    public void SetIsTalking(bool state)
+    {
+        isTalking = state;
+    }
+
     void Update()
     {
         if(Input.GetMouseButtonDown(0) && canTalk && isTalking == false)
