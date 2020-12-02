@@ -8,6 +8,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        FindObjectOfType<DialogueManager>().SetNPCtrigerrer(gameObject.GetComponent<NPC>());
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 }

@@ -14,12 +14,20 @@ public class DialogueManager : MonoBehaviour
 
     private Movement thePlayer;
 
+    private NPC npcTrigerrer;
+
     // Update is called once per frame
     void Start()
     {
         sentences = new Queue<string>();
         thePlayer = FindObjectOfType<Movement>();
     }
+
+    public void SetNPCtrigerrer(NPC npc)
+    {
+        npcTrigerrer = npc;
+    }
+
     public void StartDialogue (Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
@@ -64,5 +72,6 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", false);
         Debug.Log("End of conversation.");
         thePlayer.canMove = true;
+        npcTrigerrer.SetIsTalking(false);
     }
 }
