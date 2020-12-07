@@ -12,6 +12,10 @@ public class Movement : MonoBehaviour
 
     public bool canMove = true;
 
+    public bool test = false;
+
+    public Canvas canvas = null;
+
     void Start()
     {
 
@@ -19,15 +23,31 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        if(!canMove)
+        if (!test)
         {
-            movement.x = 0;
-            movement.y = 0;
+            if(!canMove)
+            {
+                movement.x = 0;
+                movement.y = 0;
+            }
+            else
+            {
+                movement.x = Input.GetAxisRaw("Horizontal");
+                movement.y = Input.GetAxisRaw("Vertical");
+            }
         }
         else
         {
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Vertical");
+            if (canvas.GetComponentInChildren<Transform>() != null) 
+            {
+                movement.x = 0;
+                movement.y = 0;
+            }
+            else
+            {
+                movement.x = Input.GetAxisRaw("Horizontal");
+                movement.y = Input.GetAxisRaw("Vertical");
+            }
         }
         //movement.x = Input.GetAxisRaw("Horizontal");
         //movement.y = Input.GetAxisRaw("Vertical");
