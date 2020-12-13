@@ -5,39 +5,56 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float MovementSpeed = 10.0f;
-    public KeyCode MoveRight = KeyCode.D;
-    public KeyCode MoveLeft = KeyCode.A;
-    public KeyCode MoveUp = KeyCode.W;
-    public KeyCode MoveDown = KeyCode.S;
 
+    public Rigidbody2D rb;
 
-    // Start is called before the first frame update
+    Vector2 movement;
+
+    public bool canMove = true;
+
+    public bool test = false;
+
+    public Canvas canvas = null;
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(MoveRight))
+        if (!test)
         {
-            gameObject.transform.position += new Vector3(1.0f * MovementSpeed, 0.0f, 0.0f) * Time.deltaTime;
+            if(!canMove)
+            {
+                movement.x = 0;
+                movement.y = 0;
+            }
+            else
+            {
+                movement.x = Input.GetAxisRaw("Horizontal");
+                movement.y = Input.GetAxisRaw("Vertical");
+            }
         }
+        else
+        {
+            if (canvas.GetComponentInChildren<Transform>() != null) 
+            {
+                movement.x = 0;
+                movement.y = 0;
+            }
+            else
+            {
+                movement.x = Input.GetAxisRaw("Horizontal");
+                movement.y = Input.GetAxisRaw("Vertical");
+            }
+        }
+        //movement.x = Input.GetAxisRaw("Horizontal");
+        //movement.y = Input.GetAxisRaw("Vertical");
+    }
 
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(MoveLeft))
-        {
-            gameObject.transform.position -= new Vector3(1.0f * MovementSpeed, 0.0f, 0.0f) * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(MoveUp))
-        {
-            gameObject.transform.position += new Vector3(0.0f, 1.0f * MovementSpeed, 0.0f) * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(MoveDown))
-        {
-            gameObject.transform.position -= new Vector3(0.0f, 1.0f * MovementSpeed, 0.0f) * Time.deltaTime;
-        }
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + movement.normalized * MovementSpeed * Time.fixedDeltaTime);
     }
 }
