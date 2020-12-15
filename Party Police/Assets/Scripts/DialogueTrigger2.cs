@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class DialogueTrigger : MonoBehaviour
+public class DialogueTrigger2 : MonoBehaviour
 {
     public Dialogue dialogue;
    
