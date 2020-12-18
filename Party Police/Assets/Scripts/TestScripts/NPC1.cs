@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class NPC1 : MonoBehaviour
 {
-
     private bool canTalk = false;
     private bool isTalking = false;
+    private bool canClick = false;
 
 
 
@@ -32,6 +32,16 @@ public class NPC1 : MonoBehaviour
         isTalking = false;
     }
 
+    private void OnMouseOver()
+    {
+        canClick = true;
+    }
+
+    private void OnMouseExit()
+    {
+        canClick = false;
+    }
+
     public void SetIsTalking(bool state)
     {
         isTalking = state;
@@ -39,9 +49,10 @@ public class NPC1 : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && canTalk && isTalking == false)
+        if(Input.GetMouseButtonDown(0) && canClick && canTalk && isTalking == false)
         {
             gameObject.GetComponent<BasicInkExample>().StartStory();
+            FindObjectOfType<DialogueManager1>().SetNPCtrigerrer(this);
             //gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
             isTalking = true;
         }
