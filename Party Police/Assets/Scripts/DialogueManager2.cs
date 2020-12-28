@@ -14,7 +14,7 @@ public class DialogueManager2 : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue (Dialogue dialogue)
+    public void StartDialogue (Dialogue1 dialogue)
     {
         //Debug.Log("Starting conversation with" + dialogue.name);
 
@@ -34,7 +34,7 @@ public class DialogueManager2 : MonoBehaviour
     {
         if (sentences.Count == 0)
         {
-            EndDialogue();
+            EndDialogue1();
             return;
         }
 
@@ -43,7 +43,7 @@ public class DialogueManager2 : MonoBehaviour
         dialogueText.text = sentence;
     }
 
-    void EndDialogue ()
+    void EndDialogue1 ()
     {
         Debug.Log("End of conversation");
     }

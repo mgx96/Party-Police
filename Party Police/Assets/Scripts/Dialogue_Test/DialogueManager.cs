@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueManager2 : MonoBehaviour
+public class DialogueManager : MonoBehaviour
 {
     public Text nameText;
     public Text dialogueText;
@@ -28,7 +28,7 @@ public class DialogueManager2 : MonoBehaviour
         npcTrigerrer = npc;
     }
 
-    public void StartDialogue (Dialogue dialogue)
+    public void StartDialogue (Dialogue1 dialogue)
     {
         animator.SetBool("IsOpen", true);
 
