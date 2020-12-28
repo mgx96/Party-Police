@@ -53,7 +53,7 @@ public class BasicInkExample : MonoBehaviour {
 		}
 		// If we've read all the content and there's no choices, the story is finished!
 		else {
-			Button choice = CreateChoiceView("Close conversation.");
+			Button choice = CreateChoiceView("Goodbye.");
 			//choice.onClick.AddListener(delegate{
 			//	StartStory();
 			//});

@@ -14,18 +14,55 @@ public class DialogueManager1 : MonoBehaviour
 
     private Movement thePlayer;
 
-    private NPC npcTrigerrer;
+    private bool _isTalking;
 
-    // Update is called once per frame
+    private BasicInkExample basicInk = null;
+
+    private NPC1 npcTrigerrer = null;
+
+
     void Start()
     {
         sentences = new Queue<string>();
         thePlayer = FindObjectOfType<Movement>();
     }
 
-    public void SetNPCtrigerrer(NPC npc)
+    private void FixedUpdate()
+    {
+        if (basicInk != null)
+        {
+            _isTalking = basicInk.isTalking;
+            nameText.text = npcTrigerrer.gameObject.name;
+
+            if (!_isTalking)
+            {
+                npcTrigerrer.SetIsTalking(false);
+                nameText.text = null;
+                npcTrigerrer = null;
+                basicInk = null;
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (_isTalking)
+        {
+            animator.SetBool("IsOpen", true);
+            thePlayer.canMove = false;
+        }
+
+        if (!_isTalking)
+        {
+            animator.SetBool("IsOpen", false);
+            thePlayer.canMove = true;
+        }
+    }
+
+    public void SetNPCtrigerrer(NPC1 npc)
     {
         npcTrigerrer = npc;
+        basicInk = npc.GetComponent<BasicInkExample>();
     }
 
     public void StartDialogue (Dialogue dialogue)
