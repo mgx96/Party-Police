@@ -258,7 +258,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 500
   m_TargetDisplay: 0
 --- !u!114 &187888655
 MonoBehaviour:
@@ -276,8 +276,8 @@ MonoBehaviour:
     m_Left: 20
     m_Right: 20
     m_Top: 20
-    m_Bottom: 20
-  m_ChildAlignment: 4
+    m_Bottom: 35
+  m_ChildAlignment: 7
   m_Spacing: 10
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
@@ -1475,7 +1475,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &657387520
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1686,7 +1686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4803796386028782020, guid: 2d86331bfee4b9d4abc80bffb3989c0b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d86331bfee4b9d4abc80bffb3989c0b, type: 3}
@@ -1926,6 +1926,7 @@ GameObject:
   - component: {fileID: 731501297}
   - component: {fileID: 731501299}
   - component: {fileID: 731501298}
+  - component: {fileID: 731501300}
   m_Layer: 0
   m_Name: Village Leader
   m_TagString: Untagged
@@ -2065,10 +2066,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66e957d58a4584a8894329531ec0b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTalking: 0
   inkJSONAsset: {fileID: 4900000, guid: 6cf48bb6d89824cc69e35b43f9a1aca6, type: 3}
   canvas: {fileID: 187888654}
   textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
   buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
+--- !u!114 &731501300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731501293}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d155158a2e49d488ba9b3c6e66f1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkExample: {fileID: 731501299}
 --- !u!1 &734258972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2262,7 +2277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &901483429
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2806,7 +2821,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1179896776
 GameObject:
@@ -3604,7 +3619,7 @@ RectTransform:
   m_Children:
   - {fileID: 1993655630}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4066,7 +4081,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1565359454
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5091,7 +5106,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1797663476
 MonoBehaviour:
@@ -5410,7 +5425,7 @@ Transform:
   m_Children:
   - {fileID: 908684703}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1909215360
 GameObject:
@@ -5940,7 +5955,7 @@ Transform:
   - {fileID: 187888658}
   - {fileID: 2100681118}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2100681117
 GameObject:
