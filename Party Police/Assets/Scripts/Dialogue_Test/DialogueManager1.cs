@@ -65,7 +65,7 @@ public class DialogueManager1 : MonoBehaviour
         basicInk = npc.GetComponent<BasicInkExample>();
     }
 
-    public void StartDialogue (Dialogue dialogue)
+    public void StartDialogue (Dialogue1 dialogue)
     {
         animator.SetBool("IsOpen", true);
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Trigger : MonoBehaviour
 {
     public Canvas myCanvas;
-    public Dialogue dialogue;
+    public Dialogue1 dialogue;
 
     private void Awake()
     {
