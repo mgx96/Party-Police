@@ -103,7 +103,7 @@ public class BasicInkExample : MonoBehaviour {
 	}
 
 	[SerializeField]
-	private TextAsset inkJSONAsset = null;
+	public TextAsset inkJSONAsset = null;
 	public Story story;
 
 	[SerializeField]
