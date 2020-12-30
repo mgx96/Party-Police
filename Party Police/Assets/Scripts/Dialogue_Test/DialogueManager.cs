@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
         npcTrigerrer = npc;
     }
 
-    public void StartDialogue (Dialogue dialogue)
+    public void StartDialogue (Dialogue1 dialogue)
     {
         animator.SetBool("IsOpen", true);
 
