@@ -439,8 +439,11 @@ GameObject:
   m_Component:
   - component: {fileID: 289646928}
   - component: {fileID: 289646929}
+  - component: {fileID: 289646930}
+  - component: {fileID: 289646931}
+  - component: {fileID: 289646932}
   m_Layer: 0
-  m_Name: Blacksmith
+  m_Name: Blacksmith Gro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -511,6 +514,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &289646930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289646927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e957d58a4584a8894329531ec0b096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  inkJSONAsset: {fileID: 0}
+  canvas: {fileID: 187888654}
+  textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
+--- !u!114 &289646931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289646927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47243b9b20413de43b6cfeaffcff20c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &289646932
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289646927}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.8, y: 3.23}
+    newSize: {x: 2.8, y: 3.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &293046008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1338,109 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8, y: 3.57}
   m_EdgeRadius: 0
+--- !u!1 &575382647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575382649}
+  - component: {fileID: 575382648}
+  m_Layer: 0
+  m_Name: ConversationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &575382648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575382647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40995649337cd7e45880360c9cb377fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvas: {fileID: 187888654}
+  _textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
+  _buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
+  allConversations:
+  - npcName: Ulf
+    intro: {fileID: 4900000, guid: 6ee8ad05324496b49a4d905b8b681966, type: 3}
+    npc: {fileID: 731501299}
+    conversations:
+    - {fileID: 4900000, guid: 5c6e9a9f39d93f448875f5c730e4c9d2, type: 3}
+    - {fileID: 4900000, guid: c19d1917e69192c4da23274102d1a116, type: 3}
+  - npcName: Toke
+    intro: {fileID: 4900000, guid: 5ac1e65376fbbf24098620302a9cb8d3, type: 3}
+    npc: {fileID: 1180558893}
+    conversations:
+    - {fileID: 4900000, guid: b905d4843c45ef447990ede7002f6bfb, type: 3}
+    - {fileID: 4900000, guid: b6728b6c883d07a48bcad3c4b5fb2d3a, type: 3}
+  - npcName: Yrsa
+    intro: {fileID: 4900000, guid: 8cf678445a7fb3e45808e46faf3b317d, type: 3}
+    npc: {fileID: 1203786698}
+    conversations:
+    - {fileID: 4900000, guid: 2f40f4c218501e542b8b59a620ca4226, type: 3}
+    - {fileID: 4900000, guid: 5add427c99af637479afed02ac5ac323, type: 3}
+  - npcName: Sten
+    intro: {fileID: 4900000, guid: f84955045e31ed540977c5ed9dd4e8ec, type: 3}
+    npc: {fileID: 1710444080}
+    conversations:
+    - {fileID: 4900000, guid: 320aaafa4c5017b4c879d8415137bf18, type: 3}
+  - npcName: Birger
+    intro: {fileID: 4900000, guid: 1735d090c10d97d4e91cf155af0f83ea, type: 3}
+    npc: {fileID: 1545714245}
+    conversations:
+    - {fileID: 4900000, guid: bac4eb9018eb7ab40a2bf44e6c38b0a8, type: 3}
+    - {fileID: 4900000, guid: bbfcee0366104f4439dcbb608e842314, type: 3}
+  - npcName: Fossegrim
+    intro: {fileID: 0}
+    npc: {fileID: 1702140842}
+    conversations:
+    - {fileID: 4900000, guid: 05acfdb18ec6a0a4e833e7dec8bc0ec9, type: 3}
+  - npcName: Gro
+    intro: {fileID: 4900000, guid: efdac389542800a4ea12736852378e5f, type: 3}
+    npc: {fileID: 289646930}
+    conversations:
+    - {fileID: 4900000, guid: 853936b36c1d6d6448017d1fcef7cf48, type: 3}
+    - {fileID: 4900000, guid: e52b220a35059aa47a43516957d59d02, type: 3}
+    - {fileID: 4900000, guid: 82511c2b7b5a3af4bb093a71e6121809, type: 3}
+  - npcName: Harold
+    intro: {fileID: 4900000, guid: 8c39f13f53a2dc146b7bba6b31bb0ab2, type: 3}
+    npc: {fileID: 1525984386}
+    conversations:
+    - {fileID: 4900000, guid: 3766fb427d6f73d4b9e86857d9be6039, type: 3}
+    - {fileID: 4900000, guid: 5e371650873170c4199603019dfd5c93, type: 3}
+    - {fileID: 4900000, guid: 758f94bb7c40cd5459fc057b8f4ab409, type: 3}
+    - {fileID: 4900000, guid: fd2057dd64093be47b18663fc29dbb7f, type: 3}
+    - {fileID: 4900000, guid: fe37e9a54b3d97c47a312f9c12f97455, type: 3}
+  - npcName: Sigrid
+    intro: {fileID: 0}
+    npc: {fileID: 1244529809}
+    conversations:
+    - {fileID: 4900000, guid: 5a33cfef5eba6504f95d770d7243d57b, type: 3}
+    - {fileID: 4900000, guid: fe5c745c530876242bb6b1ccf738f893, type: 3}
+--- !u!4 &575382649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575382647}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619207234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,7 +2089,7 @@ GameObject:
   - component: {fileID: 731501298}
   - component: {fileID: 731501300}
   m_Layer: 0
-  m_Name: Village Leader
+  m_Name: Village Leader Ulf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2011,11 +2172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94692ff867b6b364cbb807ccc6b101ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Harold
-    sentences:
-    - Oh? Who do we have here?
-    - "You wouldn\u2019t happen to have seen some missing children around, have you?"
 --- !u!61 &731501297
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3010,8 +3166,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1180558891}
   - component: {fileID: 1180558892}
+  - component: {fileID: 1180558893}
+  - component: {fileID: 1180558894}
+  - component: {fileID: 1180558895}
   m_Layer: 0
-  m_Name: Farmer
+  m_Name: Farmer Toke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3082,6 +3241,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1180558893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180558890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e957d58a4584a8894329531ec0b096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  inkJSONAsset: {fileID: 0}
+  canvas: {fileID: 187888654}
+  textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
+--- !u!114 &1180558894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180558890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47243b9b20413de43b6cfeaffcff20c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1180558895
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180558890}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.8, y: 3.23}
+    newSize: {x: 2.8, y: 3.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &1203786695
 GameObject:
   m_ObjectHideFlags: 0
@@ -3092,8 +3306,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1203786696}
   - component: {fileID: 1203786697}
+  - component: {fileID: 1203786698}
+  - component: {fileID: 1203786699}
+  - component: {fileID: 1203786700}
   m_Layer: 0
-  m_Name: Farmer's Wife
+  m_Name: Farmer's Wife Yrsa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3164,6 +3381,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1203786698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203786695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e957d58a4584a8894329531ec0b096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  inkJSONAsset: {fileID: 0}
+  canvas: {fileID: 187888654}
+  textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
+--- !u!114 &1203786699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203786695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47243b9b20413de43b6cfeaffcff20c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1203786700
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203786695}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.8, y: 3.23}
+    newSize: {x: 2.8, y: 3.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &1223231487
 GameObject:
   m_ObjectHideFlags: 0
@@ -3253,8 +3525,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1244529807}
   - component: {fileID: 1244529808}
+  - component: {fileID: 1244529809}
+  - component: {fileID: 1244529810}
+  - component: {fileID: 1244529811}
   m_Layer: 0
-  m_Name: Fisher (1)
+  m_Name: Fisher (1) Sigrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3325,6 +3600,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1244529809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244529806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e957d58a4584a8894329531ec0b096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  inkJSONAsset: {fileID: 0}
+  canvas: {fileID: 187888654}
+  textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
+--- !u!114 &1244529810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244529806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47243b9b20413de43b6cfeaffcff20c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1244529811
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244529806}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.8, y: 3.23}
+    newSize: {x: 2.8, y: 3.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &1267162668
 GameObject:
   m_ObjectHideFlags: 0
@@ -3455,13 +3785,16 @@ GameObject:
   m_Component:
   - component: {fileID: 1405129336}
   - component: {fileID: 1405129337}
+  - component: {fileID: 1405129338}
+  - component: {fileID: 1405129339}
+  - component: {fileID: 1405129340}
   m_Layer: 0
   m_Name: Fisher (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1405129336
 Transform:
   m_ObjectHideFlags: 0
@@ -3527,6 +3860,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1405129338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405129335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e957d58a4584a8894329531ec0b096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  inkJSONAsset: {fileID: 0}
+  canvas: {fileID: 187888654}
+  textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
+--- !u!114 &1405129339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405129335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47243b9b20413de43b6cfeaffcff20c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1405129340
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405129335}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.8, y: 3.23}
+    newSize: {x: 2.8, y: 3.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &1460138016
 GameObject:
   m_ObjectHideFlags: 0
@@ -3732,8 +4120,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1525984384}
   - component: {fileID: 1525984385}
+  - component: {fileID: 1525984386}
+  - component: {fileID: 1525984387}
+  - component: {fileID: 1525984388}
   m_Layer: 0
-  m_Name: Fisher
+  m_Name: Fisher Harold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3804,6 +4195,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1525984386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525984383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e957d58a4584a8894329531ec0b096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  inkJSONAsset: {fileID: 0}
+  canvas: {fileID: 187888654}
+  textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
+--- !u!114 &1525984387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525984383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47243b9b20413de43b6cfeaffcff20c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1525984388
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525984383}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.8, y: 3.23}
+    newSize: {x: 2.8, y: 3.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &1545714242
 GameObject:
   m_ObjectHideFlags: 0
@@ -3814,8 +4260,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1545714243}
   - component: {fileID: 1545714244}
+  - component: {fileID: 1545714245}
+  - component: {fileID: 1545714246}
+  - component: {fileID: 1545714247}
   m_Layer: 0
-  m_Name: Leatherworker
+  m_Name: Leatherworker Birger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3886,6 +4335,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1545714245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545714242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e957d58a4584a8894329531ec0b096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  inkJSONAsset: {fileID: 0}
+  canvas: {fileID: 187888654}
+  textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
+--- !u!114 &1545714246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545714242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47243b9b20413de43b6cfeaffcff20c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1545714247
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545714242}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.8, y: 3.23}
+    newSize: {x: 2.8, y: 3.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &1555330806
 GameObject:
   m_ObjectHideFlags: 0
@@ -4442,8 +4946,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1702140840}
   - component: {fileID: 1702140841}
+  - component: {fileID: 1702140842}
+  - component: {fileID: 1702140843}
+  - component: {fileID: 1702140844}
   m_Layer: 0
-  m_Name: Craftsman
+  m_Name: Craftsman Fossegrim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4514,6 +5021,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1702140842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702140839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e957d58a4584a8894329531ec0b096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  inkJSONAsset: {fileID: 0}
+  canvas: {fileID: 187888654}
+  textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
+--- !u!114 &1702140843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702140839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47243b9b20413de43b6cfeaffcff20c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1702140844
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702140839}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.8, y: 3.23}
+    newSize: {x: 2.8, y: 3.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &1710444077
 GameObject:
   m_ObjectHideFlags: 0
@@ -4524,8 +5086,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1710444078}
   - component: {fileID: 1710444079}
+  - component: {fileID: 1710444080}
+  - component: {fileID: 1710444081}
+  - component: {fileID: 1710444082}
   m_Layer: 0
-  m_Name: Cattle Farmer
+  m_Name: Cattle Farmer Sten
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4596,6 +5161,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1710444080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710444077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e957d58a4584a8894329531ec0b096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  inkJSONAsset: {fileID: 0}
+  canvas: {fileID: 187888654}
+  textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
+--- !u!114 &1710444081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710444077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47243b9b20413de43b6cfeaffcff20c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1710444082
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710444077}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.8, y: 3.23}
+    newSize: {x: 2.8, y: 3.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &1712525980
 GameObject:
   m_ObjectHideFlags: 0
@@ -5123,6 +5743,7 @@ MonoBehaviour:
   nameText: {fileID: 1179896778}
   dialogueText: {fileID: 1565359455}
   animator: {fileID: 1993655633}
+  conversationChanger: {fileID: 575382648}
 --- !u!1 &1811882819
 GameObject:
   m_ObjectHideFlags: 0
@@ -5136,6 +5757,9 @@ GameObject:
   - component: {fileID: 1811882823}
   - component: {fileID: 1811882822}
   - component: {fileID: 1811882821}
+  - component: {fileID: 1811882825}
+  - component: {fileID: 1811882826}
+  - component: {fileID: 1811882827}
   m_Layer: 0
   m_Name: Village Elder
   m_TagString: Untagged
@@ -5207,13 +5831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94692ff867b6b364cbb807ccc6b101ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Sten
-    sentences:
-    - "You there! You\u2019re the one who washed up on the beach."
-    - "You should leave if you know what\u2019s good for you!"
-    - "There are dark forces at work in this town\u2026"
-    - Someone upset the Gods and the spirits!
 --- !u!212 &1811882824
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5265,6 +5882,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1811882825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811882819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e957d58a4584a8894329531ec0b096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  inkJSONAsset: {fileID: 0}
+  canvas: {fileID: 187888654}
+  textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
+--- !u!114 &1811882826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811882819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47243b9b20413de43b6cfeaffcff20c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1811882827
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811882819}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.8, y: 3.23}
+    newSize: {x: 2.8, y: 3.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.8, y: 3.23}
+  m_EdgeRadius: 0
 --- !u!1 &1878431039
 GameObject:
   m_ObjectHideFlags: 0

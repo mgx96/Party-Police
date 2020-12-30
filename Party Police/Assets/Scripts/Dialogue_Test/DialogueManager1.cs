@@ -20,6 +20,13 @@ public class DialogueManager1 : MonoBehaviour
 
     private NPC1 npcTrigerrer = null;
 
+    private Conversations currentConversation = null;
+
+    [SerializeField]
+    private ConversationChanger conversationChanger = null;
+
+    private bool Found = false;
+
 
     void Start()
     {
@@ -33,13 +40,20 @@ public class DialogueManager1 : MonoBehaviour
         {
             _isTalking = basicInk.isTalking;
             nameText.text = npcTrigerrer.gameObject.name;
+            FindCurrentConversation();
 
             if (!_isTalking)
             {
+                if (currentConversation.npc.inkJSONAsset == currentConversation.intro)
+                {
+                    currentConversation.npc.inkJSONAsset = currentConversation.conversations[0];
+                }
                 npcTrigerrer.SetIsTalking(false);
                 nameText.text = null;
                 npcTrigerrer = null;
                 basicInk = null;
+                currentConversation = null;
+                Found = false;
             }
         }
     }
@@ -57,6 +71,8 @@ public class DialogueManager1 : MonoBehaviour
             animator.SetBool("IsOpen", false);
             thePlayer.canMove = true;
         }
+
+
     }
 
     public void SetNPCtrigerrer(NPC1 npc)
@@ -110,5 +126,20 @@ public class DialogueManager1 : MonoBehaviour
         Debug.Log("End of conversation.");
         thePlayer.canMove = true;
         npcTrigerrer.SetIsTalking(false);
+    }
+
+    void FindCurrentConversation()
+    {
+        if (!Found)
+        {
+            for (int i = 0; i < conversationChanger.allConversations.Length; i++)
+            {
+                if (basicInk == conversationChanger.allConversations[i].npc)
+                {
+                    currentConversation = conversationChanger.allConversations[i];
+                    Found = true;
+                }
+            }
+        }
     }
 }
