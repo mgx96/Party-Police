@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class DialogueTrigger2 : MonoBehaviour
 {
-    public Dialogue dialogue;
+    public Dialogue1 dialogue;
    
 
     public void TriggerDialogue()
