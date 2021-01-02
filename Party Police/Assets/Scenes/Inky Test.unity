@@ -1338,109 +1338,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8, y: 3.57}
   m_EdgeRadius: 0
---- !u!1 &575382647
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 575382649}
-  - component: {fileID: 575382648}
-  m_Layer: 0
-  m_Name: ConversationManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &575382648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575382647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40995649337cd7e45880360c9cb377fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _canvas: {fileID: 187888654}
-  _textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
-  _buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
-  allConversations:
-  - npcName: Ulf
-    intro: {fileID: 4900000, guid: 6ee8ad05324496b49a4d905b8b681966, type: 3}
-    npc: {fileID: 731501299}
-    conversations:
-    - {fileID: 4900000, guid: 5c6e9a9f39d93f448875f5c730e4c9d2, type: 3}
-    - {fileID: 4900000, guid: c19d1917e69192c4da23274102d1a116, type: 3}
-  - npcName: Toke
-    intro: {fileID: 4900000, guid: 5ac1e65376fbbf24098620302a9cb8d3, type: 3}
-    npc: {fileID: 1180558893}
-    conversations:
-    - {fileID: 4900000, guid: b905d4843c45ef447990ede7002f6bfb, type: 3}
-    - {fileID: 4900000, guid: b6728b6c883d07a48bcad3c4b5fb2d3a, type: 3}
-  - npcName: Yrsa
-    intro: {fileID: 4900000, guid: 8cf678445a7fb3e45808e46faf3b317d, type: 3}
-    npc: {fileID: 1203786698}
-    conversations:
-    - {fileID: 4900000, guid: 2f40f4c218501e542b8b59a620ca4226, type: 3}
-    - {fileID: 4900000, guid: 5add427c99af637479afed02ac5ac323, type: 3}
-  - npcName: Sten
-    intro: {fileID: 4900000, guid: f84955045e31ed540977c5ed9dd4e8ec, type: 3}
-    npc: {fileID: 1710444080}
-    conversations:
-    - {fileID: 4900000, guid: 320aaafa4c5017b4c879d8415137bf18, type: 3}
-  - npcName: Birger
-    intro: {fileID: 4900000, guid: 1735d090c10d97d4e91cf155af0f83ea, type: 3}
-    npc: {fileID: 1545714245}
-    conversations:
-    - {fileID: 4900000, guid: bac4eb9018eb7ab40a2bf44e6c38b0a8, type: 3}
-    - {fileID: 4900000, guid: bbfcee0366104f4439dcbb608e842314, type: 3}
-  - npcName: Fossegrim
-    intro: {fileID: 0}
-    npc: {fileID: 1702140842}
-    conversations:
-    - {fileID: 4900000, guid: 05acfdb18ec6a0a4e833e7dec8bc0ec9, type: 3}
-  - npcName: Gro
-    intro: {fileID: 4900000, guid: efdac389542800a4ea12736852378e5f, type: 3}
-    npc: {fileID: 289646930}
-    conversations:
-    - {fileID: 4900000, guid: 853936b36c1d6d6448017d1fcef7cf48, type: 3}
-    - {fileID: 4900000, guid: e52b220a35059aa47a43516957d59d02, type: 3}
-    - {fileID: 4900000, guid: 82511c2b7b5a3af4bb093a71e6121809, type: 3}
-  - npcName: Harold
-    intro: {fileID: 4900000, guid: 8c39f13f53a2dc146b7bba6b31bb0ab2, type: 3}
-    npc: {fileID: 1525984386}
-    conversations:
-    - {fileID: 4900000, guid: 3766fb427d6f73d4b9e86857d9be6039, type: 3}
-    - {fileID: 4900000, guid: 5e371650873170c4199603019dfd5c93, type: 3}
-    - {fileID: 4900000, guid: 758f94bb7c40cd5459fc057b8f4ab409, type: 3}
-    - {fileID: 4900000, guid: fd2057dd64093be47b18663fc29dbb7f, type: 3}
-    - {fileID: 4900000, guid: fe37e9a54b3d97c47a312f9c12f97455, type: 3}
-  - npcName: Sigrid
-    intro: {fileID: 0}
-    npc: {fileID: 1244529809}
-    conversations:
-    - {fileID: 4900000, guid: 5a33cfef5eba6504f95d770d7243d57b, type: 3}
-    - {fileID: 4900000, guid: fe5c745c530876242bb6b1ccf738f893, type: 3}
---- !u!4 &575382649
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575382647}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619207234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2831,57 +2728,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1082796577
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1082796579}
-  - component: {fileID: 1082796578}
-  m_Layer: 0
-  m_Name: DialogueProgressTracker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1082796578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082796577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 221a7b1fd53f39a4db9c0fafe1783974, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 1797663476}
-  conversationChanger: {fileID: 575382648}
-  switchOne: []
-  switchTwo: []
-  switchThree: []
-  conversationsForFirstSwitch: 10
-  conversationsForSecondSwitch: 10
-  conversationsForThirdSwitch: 10
---- !u!4 &1082796579
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082796577}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1106351997
 GameObject:
   m_ObjectHideFlags: 0
@@ -5748,53 +5594,6 @@ MonoBehaviour:
   sortingOrderBase: 5000
   offset: 0
   runOnlyOnce: 1
---- !u!1 &1797663474
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1797663475}
-  - component: {fileID: 1797663476}
-  m_Layer: 0
-  m_Name: DialogueManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1797663475
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797663474}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 503, y: 314.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1797663476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797663474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dccdf093eee72fd418f4549f12364cb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 1179896778}
-  dialogueText: {fileID: 1565359455}
-  animator: {fileID: 1993655633}
-  conversationChanger: {fileID: 575382648}
 --- !u!1 &1811882819
 GameObject:
   m_ObjectHideFlags: 0
@@ -6148,7 +5947,7 @@ Transform:
   m_Children:
   - {fileID: 908684703}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1909215360
 GameObject:
@@ -6789,3 +6588,112 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &190738289979489070
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 190738289528721882, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1993655633}
+    - target: {fileID: 190738289528721882, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1179896778}
+    - target: {fileID: 190738289528721882, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1565359455}
+    - target: {fileID: 190738290477981526, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: _canvas
+      value: 
+      objectReference: {fileID: 187888654}
+    - target: {fileID: 190738290477981526, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: allConversations.Array.data[0].npc
+      value: 
+      objectReference: {fileID: 731501299}
+    - target: {fileID: 190738290477981526, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: allConversations.Array.data[1].npc
+      value: 
+      objectReference: {fileID: 1180558893}
+    - target: {fileID: 190738290477981526, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: allConversations.Array.data[2].npc
+      value: 
+      objectReference: {fileID: 1203786698}
+    - target: {fileID: 190738290477981526, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: allConversations.Array.data[3].npc
+      value: 
+      objectReference: {fileID: 1710444080}
+    - target: {fileID: 190738290477981526, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: allConversations.Array.data[4].npc
+      value: 
+      objectReference: {fileID: 1545714245}
+    - target: {fileID: 190738290477981526, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: allConversations.Array.data[5].npc
+      value: 
+      objectReference: {fileID: 1702140842}
+    - target: {fileID: 190738290477981526, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: allConversations.Array.data[6].npc
+      value: 
+      objectReference: {fileID: 289646930}
+    - target: {fileID: 190738290477981526, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: allConversations.Array.data[7].npc
+      value: 
+      objectReference: {fileID: 1525984386}
+    - target: {fileID: 190738290477981526, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: allConversations.Array.data[8].npc
+      value: 
+      objectReference: {fileID: 1244529809}
+    - target: {fileID: 5342280355408435378, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: m_Name
+      value: DIALOGUEMASTER
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427802845155531102, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427802845155531102, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427802845155531102, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427802845155531102, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427802845155531102, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427802845155531102, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427802845155531102, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427802845155531102, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427802845155531102, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427802845155531102, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427802845155531102, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f102a2cb5b8bac34a8eace3612dc5b20, type: 3}
