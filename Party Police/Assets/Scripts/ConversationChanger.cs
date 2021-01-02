@@ -15,6 +15,8 @@ public class ConversationChanger : MonoBehaviour
     [SerializeField]
     private Button _buttonPrefab = null;
 
+    public TextAsset preHaroldIntro = null;
+
     public Conversations[] allConversations;
 
     //public GameObject npc;
@@ -27,13 +29,13 @@ public class ConversationChanger : MonoBehaviour
             allConversations[i].npc.textPrefab = _textPrefab;
             allConversations[i].npc.buttonPrefab = _buttonPrefab;
 
-            if (allConversations[i].intro != null)
+            if (allConversations[i].npcName == "Harold")
             {
                 allConversations[i].npc.inkJSONAsset = allConversations[i].intro;
             }
             else
             {
-                allConversations[i].npc.inkJSONAsset = allConversations[i].conversations[0];
+                allConversations[i].npc.inkJSONAsset = preHaroldIntro;
             }
         }
     }
@@ -45,5 +47,61 @@ public class ConversationChanger : MonoBehaviour
         //{
         //    npc.GetComponent<BasicInkExample>().inkJSONAsset = JSONStory;
         //}
+    }
+
+    public void SetConversation(int conversationNumber)
+    {
+        for (int i = 0; i < allConversations.Length; i++)
+        {
+            if (allConversations[i].conversations.Length > conversationNumber && allConversations[i].conversations[conversationNumber] != null)
+            {
+                allConversations[i].npc.inkJSONAsset = allConversations[i].conversations[conversationNumber];
+            }
+        }
+    }
+
+    public void StartIntros()
+    {
+        for (int i = 0; i < allConversations.Length; i++)
+        {
+            if (allConversations[i].npcName == "Harold")
+            {
+                allConversations[i].npc.inkJSONAsset = allConversations[i].conversations[0];
+            }
+            else if (allConversations[i].intro != null)
+            {
+                allConversations[i].npc.inkJSONAsset = allConversations[i].intro;
+            }
+            else
+            {
+                allConversations[i].npc.inkJSONAsset = allConversations[i].conversations[0];
+            }
+        }
+    }
+
+    public void SetConversation2point5()
+    {
+        for (int i = 0; i < allConversations.Length; i++)
+        {
+            if (allConversations[i].npcName == "Gro" || allConversations[i].npcName == "Harold")
+            {
+                allConversations[i].npc.inkJSONAsset = allConversations[i].conversations[2];
+            }
+        }
+    }
+
+    public void SetBirgerHarold3()
+    {
+        for (int i = 0; i < allConversations.Length; i++)
+        {
+            if (allConversations[i].npcName == "Birger")
+            {
+                allConversations[i].npc.inkJSONAsset = allConversations[i].conversations[3];
+            }
+            else if (allConversations[i].npcName == "Harold")
+            {
+                allConversations[i].npc.inkJSONAsset = allConversations[i].conversations[4];
+            }
+        }
     }
 }
