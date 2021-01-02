@@ -46,4 +46,15 @@ public class ConversationChanger : MonoBehaviour
         //    npc.GetComponent<BasicInkExample>().inkJSONAsset = JSONStory;
         //}
     }
+
+    public void SetConversation(int conversationNumber)
+    {
+        for (int i = 0; i < allConversations.Length; i++)
+        {
+            if (allConversations[i].conversations[conversationNumber] != null)
+            {
+                allConversations[i].npc.inkJSONAsset = allConversations[i].conversations[conversationNumber];
+            }
+        }
+    }
 }
