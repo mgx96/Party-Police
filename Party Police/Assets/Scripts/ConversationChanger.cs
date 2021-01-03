@@ -29,7 +29,7 @@ public class ConversationChanger : MonoBehaviour
             allConversations[i].npc.textPrefab = _textPrefab;
             allConversations[i].npc.buttonPrefab = _buttonPrefab;
 
-            if (allConversations[i].npcName == "Harold")
+            if (allConversations[i].npcName == "Harald")
             {
                 allConversations[i].npc.inkJSONAsset = allConversations[i].intro;
             }
@@ -64,7 +64,7 @@ public class ConversationChanger : MonoBehaviour
     {
         for (int i = 0; i < allConversations.Length; i++)
         {
-            if (allConversations[i].npcName == "Harold")
+            if (allConversations[i].npcName == "Harald")
             {
                 allConversations[i].npc.inkJSONAsset = allConversations[i].conversations[0];
             }
@@ -83,7 +83,7 @@ public class ConversationChanger : MonoBehaviour
     {
         for (int i = 0; i < allConversations.Length; i++)
         {
-            if (allConversations[i].npcName == "Gro" || allConversations[i].npcName == "Harold")
+            if (allConversations[i].npcName == "Gro" || allConversations[i].npcName == "Harald")
             {
                 allConversations[i].npc.inkJSONAsset = allConversations[i].conversations[2];
             }
@@ -98,7 +98,7 @@ public class ConversationChanger : MonoBehaviour
             {
                 allConversations[i].npc.inkJSONAsset = allConversations[i].conversations[3];
             }
-            else if (allConversations[i].npcName == "Harold")
+            else if (allConversations[i].npcName == "Harald")
             {
                 allConversations[i].npc.inkJSONAsset = allConversations[i].conversations[4];
             }
