@@ -5,10 +5,10 @@ using UnityEngine;
 public class CameraClamp : MonoBehaviour
 {
     [SerializeField]
-    private Transform playerPos;
+    private Transform target;
 
     void Update()
     {
-        transform.position = new Vector2(Mathf.Clamp(playerPos.position.x, -60f, 60f), Mathf.Clamp(playerPos.position.y, -50f, 50f));
+        transform.position = new Vector2(Mathf.Clamp(target.position.x, -60f, 60f), Mathf.Clamp(target.position.y, -50f, 50f));
     }
 }
