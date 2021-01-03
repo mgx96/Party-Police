@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DialogueProgressTracker : MonoBehaviour
 {
-    [SerializeField]
-    private DialogueManager1 dialogueManager = null;
+    //[SerializeField]
+    //private DialogueManager1 dialogueManager = null;
 
     [SerializeField]
     private ConversationChanger conversationChanger = null;

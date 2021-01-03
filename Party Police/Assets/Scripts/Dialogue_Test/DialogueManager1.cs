@@ -49,7 +49,7 @@ public class DialogueManager1 : MonoBehaviour
             if (!_isTalking)
             {
                 //So we know when Harold intro has been played
-                if (currentConversation.npcName == "Harold" && currentConversation.npc.inkJSONAsset == currentConversation.intro)
+                if (currentConversation.npcName == "Harald" && currentConversation.npc.inkJSONAsset == currentConversation.intro)
                 {
                     dialogueProgress.haroldIntro1 = true;
                 }
