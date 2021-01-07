@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueProgressTracker : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class DialogueProgressTracker : MonoBehaviour
     public bool set2point5 = false;
     bool setInvest3 = false;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -35,42 +40,46 @@ public class DialogueProgressTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (haroldIntro1 && !startedIntros)
+        //if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (SceneManager.GetActiveScene().name == "AXLROSE")
         {
-            conversationChanger.StartIntros();
-            startedIntros = true;
-        }
-
-        else if (visitedForest && !conversations1)
-        {
-            conversationChanger.SetConversation(1);
-            conversations1 = true;
-            Debug.Log("smile");
-        }
-
-        else if (conversations1 && !set2point5)
-        {
-            for (int i = 0; i < talkedTo.Length; i++)
+            if (haroldIntro1 && !startedIntros)
             {
-                if (talkedTo[i] == "")
+                conversationChanger.StartIntros();
+                startedIntros = true;
+            }
+
+            else if (visitedForest && !conversations1)
+            {
+                conversationChanger.SetConversation(1);
+                conversations1 = true;
+                Debug.Log("smile");
+            }
+
+            else if (conversations1 && !set2point5)
+            {
+                for (int i = 0; i < talkedTo.Length; i++)
                 {
-                    break;
-                }
-                else
-                {
-                    if (i == talkedTo.Length - 1)
+                    if (talkedTo[i] == "")
                     {
-                        conversationChanger.SetConversation2point5();
-                        set2point5 = true;
+                        break;
+                    }
+                    else
+                    {
+                        if (i == talkedTo.Length - 1)
+                        {
+                            conversationChanger.SetConversation2point5();
+                            set2point5 = true;
+                        }
                     }
                 }
             }
-        }
 
-        else if (nextMorning && !setInvest3)
-        {
-            conversationChanger.SetBirgerHarold3();
-            setInvest3 = true;
+            else if (nextMorning && !setInvest3)
+            {
+                conversationChanger.SetBirgerHarold3();
+                setInvest3 = true;
+            }
         }
 
 
