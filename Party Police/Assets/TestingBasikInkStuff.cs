@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class TestingBasikInkStuff : MonoBehaviour
 {
-
-    public BasicInkExample inkExample;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +15,6 @@ public class TestingBasikInkStuff : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(inkExample.isTalking);
+        Debug.Log("Hello");
     }
 }
