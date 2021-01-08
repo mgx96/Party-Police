@@ -18,10 +18,10 @@ public class DialogueProgressTracker : MonoBehaviour
 
     public string[] talkedTo;
 
-    bool startedIntros = false;
+    public bool startedIntros = false;
     public bool conversations1 = false;
     public bool set2point5 = false;
-    bool setInvest3 = false;
+    public bool setInvest3 = false;
 
     private void Awake()
     {
