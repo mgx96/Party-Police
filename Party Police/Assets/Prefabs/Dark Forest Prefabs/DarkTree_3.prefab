@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4726411085018567840}
   - component: {fileID: 4726411085018567847}
   m_Layer: 0
-  m_Name: Dark Forest Tree
+  m_Name: DarkTree_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sortingOrderBase: 5000
-  offset: -5
+  offset: -4
   runOnlyOnce: 1
 --- !u!58 &4726411085018567847
 CircleCollider2D:
