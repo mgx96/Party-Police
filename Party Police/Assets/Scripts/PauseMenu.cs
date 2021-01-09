@@ -11,6 +11,13 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject minimapUI;
 
+    Player player;
+
+    private void Awake()
+    {
+        player = FindObjectOfType<Player>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +41,11 @@ public class PauseMenu : MonoBehaviour
         minimapUI.SetActive(true);
         Time.timeScale = 1f;
         GamePaused = false;
+    }
+
+    public void Save()
+    {
+        player.SavePlayer();
     }
 
     void Pause()

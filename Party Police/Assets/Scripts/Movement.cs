@@ -30,67 +30,67 @@ public class Movement : MonoBehaviour
         isMoving = false;
     }
 
-    private void Update()
-    {
-        if (!test)
-        {
-            if (!canMove)
-            {
-                movement.x = 0;
-                movement.y = 0;
-            }
-            else
-            {
-                movement.x = Input.GetAxisRaw("Horizontal");
-                movement.y = Input.GetAxisRaw("Vertical");
-            }
-        }
-        else
-        {
-            if (canvas.GetComponentInChildren<Transform>() != null)
-            {
-                movement.x = 0;
-                movement.y = 0;
-            }
-            else
-            {
-                movement.x = Input.GetAxisRaw("Horizontal");
-                movement.y = Input.GetAxisRaw("Vertical");
-            }
-        }
-        //movement.x = Input.GetAxisRaw("Horizontal");
-        //movement.y = Input.GetAxisRaw("Vertical");
+    private void Update()
+    {
+        if (!test)
+        {
+            if (!canMove)
+            {
+                movement.x = 0;
+                movement.y = 0;
+            }
+            else
+            {
+                movement.x = Input.GetAxisRaw("Horizontal");
+                movement.y = Input.GetAxisRaw("Vertical");
+            }
+        }
+        else
+        {
+            if (canvas.GetComponentInChildren<Transform>() != null)
+            {
+                movement.x = 0;
+                movement.y = 0;
+            }
+            else
+            {
+                movement.x = Input.GetAxisRaw("Horizontal");
+                movement.y = Input.GetAxisRaw("Vertical");
+            }
+        }
+        //movement.x = Input.GetAxisRaw("Horizontal");
+        //movement.y = Input.GetAxisRaw("Vertical");
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement.normalized * MovementSpeed * Time.fixedDeltaTime);
-        anim.SetFloat("Speedx", movement.x);
+        rb.MovePosition(rb.position + movement.normalized * MovementSpeed * Time.fixedDeltaTime);
+        anim.SetFloat("Speedx", movement.x);
         anim.SetFloat("Speedy", movement.y);
-        if(movement.x != 0 || movement.y != 0)
-        {
-            isMoving = true;
+        if(movement.x != 0 || movement.y != 0)
+        {
+            isMoving = true;
         }
         else
-        {
-            isMoving = false;
+        {
+            isMoving = false;
         }
-       if (isMoving == true)
-        {
-            anim.SetBool("Moving", true);
+       if (isMoving == true)
+        {
+            anim.SetBool("Moving", true);
         }
-       else if(isMoving == false)
-        {
-            anim.SetBool("Moving", false);
+       else if(isMoving == false)
+        {
+            anim.SetBool("Moving", false);
         }
 
-       if (movement.x < 0)
-        {
-            spriteRenderer.flipX = true;
+       if (movement.x < 0)
+        {
+            spriteRenderer.flipX = true;
         }
-       else if (movement.x > 0)
-        {
-            spriteRenderer.flipX = false;
+       else if (movement.x > 0)
+        {
+            spriteRenderer.flipX = false;
         }
 
     }

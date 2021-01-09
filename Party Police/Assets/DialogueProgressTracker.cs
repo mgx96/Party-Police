@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueProgressTracker : MonoBehaviour
 {
-    [SerializeField]
-    private DialogueManager1 dialogueManager = null;
+    //[SerializeField]
+    //private DialogueManager1 dialogueManager = null;
 
     [SerializeField]
     private ConversationChanger conversationChanger = null;
@@ -15,17 +16,24 @@ public class DialogueProgressTracker : MonoBehaviour
     public bool visitedForest = false;
     public bool nextMorning = false;
 
+    public string[] invest1Progress;
     public string[] talkedTo;
 
-    bool startedIntros = false;
+    public bool startedIntros = false;
     public bool conversations1 = false;
+    public bool conversations2 = false;
     public bool set2point5 = false;
-    bool setInvest3 = false;
+    public bool setInvest3 = false;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        invest1Progress = new string[8] { null, null, null, null, null, null, null, null };
         talkedTo = new string[3] { null, null, null };
         //firstSwitch = new bool[] { ulf1, toke1, yrsa1, sten1, birger1, gro1, harold1, sigrid1 };
         //secondSwitch = new bool[] { ulf2, toke2, yrsa2, sten2, birger2, gro2, harold2, sigrid2 };
@@ -35,42 +43,46 @@ public class DialogueProgressTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (haroldIntro1 && !startedIntros)
+        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().name == "AXLROSE")
+        //if (SceneManager.GetActiveScene().name == "AXLROSE")
         {
-            conversationChanger.StartIntros();
-            startedIntros = true;
-        }
-
-        else if (visitedForest && !conversations1)
-        {
-            conversationChanger.SetConversation(1);
-            conversations1 = true;
-            Debug.Log("smile");
-        }
-
-        else if (conversations1 && !set2point5)
-        {
-            for (int i = 0; i < talkedTo.Length; i++)
+            if (haroldIntro1 && !startedIntros)
             {
-                if (talkedTo[i] == "")
+                conversationChanger.StartIntros();
+                startedIntros = true;
+            }
+
+            else if (visitedForest && !conversations1)
+            {
+                conversationChanger.SetConversation(1);
+                conversations1 = true;
+                Debug.Log("smile");
+            }
+
+            else if (conversations2 && !set2point5)
+            {
+                for (int i = 0; i < talkedTo.Length; i++)
                 {
-                    break;
-                }
-                else
-                {
-                    if (i == talkedTo.Length - 1)
+                    if (talkedTo[i] == "")
                     {
-                        conversationChanger.SetConversation2point5();
-                        set2point5 = true;
+                        break;
+                    }
+                    else
+                    {
+                        if (i == talkedTo.Length - 1)
+                        {
+                            conversationChanger.SetConversation2point5();
+                            set2point5 = true;
+                        }
                     }
                 }
             }
-        }
 
-        else if (nextMorning && !setInvest3)
-        {
-            conversationChanger.SetBirgerHarold3();
-            setInvest3 = true;
+            else if (nextMorning && !setInvest3)
+            {
+                conversationChanger.SetBirgerHarold3();
+                setInvest3 = true;
+            }
         }
 
 

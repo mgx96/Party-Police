@@ -49,7 +49,7 @@ public class DialogueManager1 : MonoBehaviour
             if (!_isTalking)
             {
                 //So we know when Harold intro has been played
-                if (currentConversation.npcName == "Harold" && currentConversation.npc.inkJSONAsset == currentConversation.intro)
+                if (currentConversation.npcName == "Harald" && currentConversation.npc.inkJSONAsset == currentConversation.intro)
                 {
                     dialogueProgress.haroldIntro1 = true;
                 }
@@ -58,6 +58,23 @@ public class DialogueManager1 : MonoBehaviour
                 else if (currentConversation.npc.inkJSONAsset == currentConversation.intro)
                 {
                     currentConversation.npc.inkJSONAsset = currentConversation.conversations[0];
+                }
+                //
+                //To check if you've talked to everyone in invest 1
+                if (dialogueProgress.conversations1)
+                {
+                    for (int i = 0; i < dialogueProgress.invest1Progress.Length; i++)
+                    {
+                        if (currentConversation.npcName == dialogueProgress.invest1Progress[i])
+                        {
+                            break;
+                        }
+                        else if (dialogueProgress.invest1Progress[i] == "")
+                        {
+                            dialogueProgress.invest1Progress[i] = currentConversation.npcName;
+                            break;
+                        }
+                    }
                 }
                 //
                 //To know when enough people for 2.5 have been talked to

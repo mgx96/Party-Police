@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Marina's Scene 2.unity
     guid: 5e66116c6a716c04d88428f8715440b8
+  - enabled: 1
+    path: Assets/Scenes/Stefan's Forest Scene.unity
+    guid: 4966fff8be328e042809b0f5cecff526
   m_configObjects: {}
