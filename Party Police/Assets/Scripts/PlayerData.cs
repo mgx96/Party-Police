@@ -11,6 +11,7 @@ public class PlayerData
     public bool nextMorning = false;
     public bool startedIntros = false;
     public bool conversations1 = false;
+    public bool conversations2 = false;
     public bool set2point5 = false;
     public bool setInvest3 = false;
 

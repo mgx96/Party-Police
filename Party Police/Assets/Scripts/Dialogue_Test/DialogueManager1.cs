@@ -60,6 +60,23 @@ public class DialogueManager1 : MonoBehaviour
                     currentConversation.npc.inkJSONAsset = currentConversation.conversations[0];
                 }
                 //
+                //To check if you've talked to everyone in invest 1
+                if (dialogueProgress.conversations1)
+                {
+                    for (int i = 0; i < dialogueProgress.invest1Progress.Length; i++)
+                    {
+                        if (currentConversation.npcName == dialogueProgress.invest1Progress[i])
+                        {
+                            break;
+                        }
+                        else if (dialogueProgress.invest1Progress[i] == "")
+                        {
+                            dialogueProgress.invest1Progress[i] = currentConversation.npcName;
+                            break;
+                        }
+                    }
+                }
+                //
                 //To know when enough people for 2.5 have been talked to
                 if (dialogueProgress.conversations1 && !dialogueProgress.set2point5)
                 {
