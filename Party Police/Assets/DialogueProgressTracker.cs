@@ -16,10 +16,12 @@ public class DialogueProgressTracker : MonoBehaviour
     public bool visitedForest = false;
     public bool nextMorning = false;
 
+    public string[] invest1Progress;
     public string[] talkedTo;
 
     public bool startedIntros = false;
     public bool conversations1 = false;
+    public bool conversations2 = false;
     public bool set2point5 = false;
     public bool setInvest3 = false;
 
@@ -31,6 +33,7 @@ public class DialogueProgressTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        invest1Progress = new string[8] { null, null, null, null, null, null, null, null };
         talkedTo = new string[3] { null, null, null };
         //firstSwitch = new bool[] { ulf1, toke1, yrsa1, sten1, birger1, gro1, harold1, sigrid1 };
         //secondSwitch = new bool[] { ulf2, toke2, yrsa2, sten2, birger2, gro2, harold2, sigrid2 };
@@ -40,8 +43,8 @@ public class DialogueProgressTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (SceneManager.GetActiveScene().buildIndex == 1)
-        if (SceneManager.GetActiveScene().name == "AXLROSE")
+        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().name == "AXLROSE")
+        //if (SceneManager.GetActiveScene().name == "AXLROSE")
         {
             if (haroldIntro1 && !startedIntros)
             {
@@ -56,7 +59,7 @@ public class DialogueProgressTracker : MonoBehaviour
                 Debug.Log("smile");
             }
 
-            else if (conversations1 && !set2point5)
+            else if (conversations2 && !set2point5)
             {
                 for (int i = 0; i < talkedTo.Length; i++)
                 {
