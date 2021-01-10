@@ -24,17 +24,32 @@ public class DialogueProgressTracker : MonoBehaviour
     public bool conversations2 = false;
     public bool set2point5 = false;
     public bool setInvest3 = false;
+    public bool harald2point5 = false;
+    public bool gro2point5 = false;
+    public bool talkedToFosse = false;
+    public bool birger3point5 = false;
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        int numMusicPlayers = FindObjectsOfType<DialogueProgressTracker>().Length;
+        if (numMusicPlayers != 1)
+        {
+            Destroy(this.gameObject);
+        }
+        // if more then one music player is in the scene
+        //destroy ourselves
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        invest1Progress = new string[8] { null, null, null, null, null, null, null, null };
+        invest1Progress = new string[7] { null, null, null, null, null, null, null };
         talkedTo = new string[3] { null, null, null };
+
         //firstSwitch = new bool[] { ulf1, toke1, yrsa1, sten1, birger1, gro1, harold1, sigrid1 };
         //secondSwitch = new bool[] { ulf2, toke2, yrsa2, sten2, birger2, gro2, harold2, sigrid2 };
         //thirdSwitch = new bool[] { ulf3, toke3, yrsa3, sten3, birger3, gro3, harold3, sigrid3 };
@@ -46,16 +61,21 @@ public class DialogueProgressTracker : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().name == "AXLROSE")
         //if (SceneManager.GetActiveScene().name == "AXLROSE")
         {
+            if (conversationChanger == null)
+            {
+                conversationChanger = FindObjectOfType<ConversationChanger>();
+            }
+
             if (haroldIntro1 && !startedIntros)
             {
                 conversationChanger.StartIntros();
                 startedIntros = true;
             }
 
-            else if (visitedForest && !conversations1)
+            else if (visitedForest && !conversations2)
             {
                 conversationChanger.SetConversation(1);
-                conversations1 = true;
+                conversations2 = true;
                 Debug.Log("smile");
             }
 
@@ -78,10 +98,20 @@ public class DialogueProgressTracker : MonoBehaviour
                 }
             }
 
-            else if (nextMorning && !setInvest3)
+            else if (gro2point5 && harald2point5 && !setInvest3)
             {
                 conversationChanger.SetBirgerHarold3();
                 setInvest3 = true;
+            }
+
+            else if (setInvest3 && talkedToFosse)
+            {
+                conversationChanger.SetHaraldBirger3point5();
+            }
+
+            else if (birger3point5)
+            {
+                conversationChanger.SetHaraldInvest4();
             }
         }
 
