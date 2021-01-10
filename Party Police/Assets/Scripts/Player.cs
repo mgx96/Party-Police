@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
             nextMorning = dialogueProgress.nextMorning;
             startedIntros = dialogueProgress.startedIntros;
             conversations1 = dialogueProgress.conversations1;
+            conversations2 = dialogueProgress.conversations2;
             set2point5 = dialogueProgress.set2point5;
             setInvest3 = dialogueProgress.setInvest3;
         }
