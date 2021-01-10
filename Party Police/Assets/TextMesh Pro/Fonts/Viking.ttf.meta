@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: caab63ad655cdda4cb125faff8ccd507
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Viking
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1bc8df330c5e4134cb5f5b01d6f25ef5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

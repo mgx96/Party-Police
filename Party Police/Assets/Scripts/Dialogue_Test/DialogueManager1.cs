@@ -48,6 +48,25 @@ public class DialogueManager1 : MonoBehaviour
 
             if (!_isTalking)
             {
+                //To check if you've talked to everyone in invest 1
+                if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[0])
+                {
+                    for (int i = 0; i < dialogueProgress.invest1Progress.Length; i++)
+                    {
+                        if (currentConversation.npcName == dialogueProgress.invest1Progress[i])
+                        {
+                            break;
+                        }
+                        else if (dialogueProgress.invest1Progress[i] == null)
+                        {
+                            dialogueProgress.invest1Progress[i] = currentConversation.npcName;
+                            break;
+                        }
+                    }
+                }
+                //
+
+
                 //So we know when Harold intro has been played
                 if (currentConversation.npcName == "Harald" && currentConversation.npc.inkJSONAsset == currentConversation.intro)
                 {
@@ -60,8 +79,9 @@ public class DialogueManager1 : MonoBehaviour
                     currentConversation.npc.inkJSONAsset = currentConversation.conversations[0];
                 }
                 //
+
                 //To know when enough people for 2.5 have been talked to
-                if (dialogueProgress.conversations1 && !dialogueProgress.set2point5)
+                if (dialogueProgress.conversations2 && !dialogueProgress.set2point5)
                 {
                     for (int i = 0; i < dialogueProgress.talkedTo.Length; i++)
                     {
@@ -76,6 +96,39 @@ public class DialogueManager1 : MonoBehaviour
                         }
                     }
                 }
+                //
+                //To know if you talked to Harald and Gro in 2.5
+                if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[2])
+                {
+                    if (currentConversation.npcName == "Harald")
+                    {
+                        dialogueProgress.harald2point5 = true;
+                    }
+                    else if (currentConversation.npcName == "Gro")
+                    {
+                        dialogueProgress.gro2point5 = true;
+                    }
+                }
+                //
+                //To move Harald past intro 2
+                if (currentConversation.npcName == "Harald")
+                {
+                    if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[3])
+                    {
+                        currentConversation.npc.inkJSONAsset = currentConversation.conversations[4];
+                    }
+                }
+                //
+                //To check if Birger 3.5 is talked to
+                if (currentConversation.npcName == "Birger")
+                {
+                    if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[3])
+                    {
+                        dialogueProgress.birger3point5 = true;
+                    }
+                }
+
+
                 npcTrigerrer.SetIsTalking(false);
                 nameText.text = null;
                 npcTrigerrer = null;
