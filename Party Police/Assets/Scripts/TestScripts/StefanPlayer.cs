@@ -3,8 +3,6 @@
 public class StefanPlayer : MonoBehaviour
 {
 
-    public GameObject border;
-
     void Update()
     {
 
