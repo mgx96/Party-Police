@@ -44,24 +44,30 @@ public class BasicInkExample : MonoBehaviour {
 		if(story.currentChoices.Count > 0) {
 			for (int i = 0; i < story.currentChoices.Count; i++) {
 				Choice choice = story.currentChoices [i];
-				Button button = CreateChoiceView (choice.text.Trim ());
-				// Tell the button what to do when we press it
-				button.onClick.AddListener (delegate {
-					OnClickChoiceButton (choice);
-				});
-			}
+                Button button = CreateChoiceView (choice.text.Trim ());
+                // Tell the button what to do when we press it
+                button.onClick.AddListener(delegate
+                {
+                    OnClickChoiceButton(choice);
+                });
+            }
 		}
-		// If we've read all the content and there's no choices, the story is finished!
-		else {
-			Button choice = CreateChoiceView("Goodbye.");
-			//choice.onClick.AddListener(delegate{
-			//	StartStory();
-			//});
-			choice.onClick.AddListener(delegate{
-				RemoveChildren();
-				isTalking = false;
-			});
-		}
+        // If we've read all the content and there's no choices, the story is finished!
+        else
+        {
+			RemoveChildren();
+			isTalking = false;
+        }
+		//else {
+		//	Button choice = CreateChoiceView("Goodbye.");
+		//	//choice.onClick.AddListener(delegate{
+		//	//	StartStory();
+		//	//});
+		//	choice.onClick.AddListener(delegate{
+		//		RemoveChildren();
+		//		isTalking = false;
+		//	});
+		//}
 	}
 
 	// When we click the choice button, tell the story to choose that choice!
@@ -103,15 +109,15 @@ public class BasicInkExample : MonoBehaviour {
 	}
 
 	[SerializeField]
-	private TextAsset inkJSONAsset = null;
+	public TextAsset inkJSONAsset = null;
 	public Story story;
 
 	[SerializeField]
-	private Canvas canvas = null;
+	public Canvas canvas = null;
 
 	// UI Prefabs
 	[SerializeField]
-	private Text textPrefab = null;
+	public Text textPrefab = null;
 	[SerializeField]
-	private Button buttonPrefab = null;
+	public Button buttonPrefab = null;
 }

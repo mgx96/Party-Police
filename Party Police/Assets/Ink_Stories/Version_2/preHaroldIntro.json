@@ -1,0 +1,1 @@
+﻿{"inkVersion":19,"root":[[["^Are you new here ? You should go talk to Harald first, he's by the town hall.","\n","ev","str","^Thank you !","/str","/ev",{"*":".^.c-0","flg":4},{"c-0":["^ ","done","\n",{"->":"0.g-1"},{"#f":5}],"#f":5,"#n":"g-0"}],{"g-1":["done",{"#f":5}]}],"done",{"#f":1}],"listDefs":{}}
