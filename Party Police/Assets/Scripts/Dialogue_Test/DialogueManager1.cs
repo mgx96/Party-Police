@@ -98,17 +98,23 @@ public class DialogueManager1 : MonoBehaviour
                 }
                 //
                 //To know if you talked to Harald and Gro in 2.5
-                if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[2])
+                if (currentConversation.npcName == "Harald")
                 {
-                    if (currentConversation.npcName == "Harald")
+                    if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[2])
                     {
                         dialogueProgress.harald2point5 = true;
                     }
-                    else if (currentConversation.npcName == "Gro")
+                }
+                
+            
+                else if (currentConversation.npcName == "Gro")
+                {
+                    if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[2])
                     {
                         dialogueProgress.gro2point5 = true;
                     }
                 }
+            
                 //
                 //To move Harald past intro 2
                 if (currentConversation.npcName == "Harald")
