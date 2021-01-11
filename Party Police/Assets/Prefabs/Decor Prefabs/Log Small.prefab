@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2046117989906430293}
   - component: {fileID: 2046117989906430292}
   m_Layer: 0
-  m_Name: Log_Small (7)
+  m_Name: Log Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sortingOrderBase: 5000
-  offset: 0
+  offset: -1
   runOnlyOnce: 1
 --- !u!61 &2046117989906430292
 BoxCollider2D:
