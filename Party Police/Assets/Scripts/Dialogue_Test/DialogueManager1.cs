@@ -47,90 +47,90 @@ public class DialogueManager1 : MonoBehaviour
             nameText.text = currentConversation.npcName;
 
             if (!_isTalking)
-            {
-                //To check if you've talked to everyone in invest 1
-                if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[0])
-                {
-                    for (int i = 0; i < dialogueProgress.invest1Progress.Length; i++)
-                    {
-                        if (currentConversation.npcName == dialogueProgress.invest1Progress[i])
-                        {
-                            break;
-                        }
-                        else if (dialogueProgress.invest1Progress[i] == null)
-                        {
-                            dialogueProgress.invest1Progress[i] = currentConversation.npcName;
-                            break;
-                        }
-                    }
+            {
+                //To check if you've talked to everyone in invest 1
+                if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[0])
+                {
+                    for (int i = 0; i < dialogueProgress.invest1Progress.Length; i++)
+                    {
+                        if (currentConversation.npcName == dialogueProgress.invest1Progress[i])
+                        {
+                            break;
+                        }
+                        else if (dialogueProgress.invest1Progress[i] == null)
+                        {
+                            dialogueProgress.invest1Progress[i] = currentConversation.npcName;
+                            break;
+                        }
+                    }
                 }
                 //
 
 
                 //So we know when Harold intro has been played
-                if (currentConversation.npcName == "Harald" && currentConversation.npc.inkJSONAsset == currentConversation.intro)
-                {
-                    dialogueProgress.haroldIntro1 = true;
+                if (currentConversation.npcName == "Harald" && currentConversation.npc.inkJSONAsset == currentConversation.intro)
+                {
+                    dialogueProgress.haroldIntro1 = true;
                 }
                 //
                 //To switch from intro to first conversation
-                else if (currentConversation.npc.inkJSONAsset == currentConversation.intro)
-                {
-                    currentConversation.npc.inkJSONAsset = currentConversation.conversations[0];
-                }
-                //
+                else if (currentConversation.npc.inkJSONAsset == currentConversation.intro)
+                {
+                    currentConversation.npc.inkJSONAsset = currentConversation.conversations[0];
+                }
+                //
 
                 //To know when enough people for 2.5 have been talked to
-                if (dialogueProgress.conversations2 && !dialogueProgress.set2point5)
-                {
-                    for (int i = 0; i < dialogueProgress.talkedTo.Length; i++)
-                    {
-                        if (currentConversation.npcName == dialogueProgress.talkedTo[i])
-                        {
-                            break;
-                        }
-                        else if (dialogueProgress.talkedTo[i] == "")
-                        {
-                            dialogueProgress.talkedTo[i] = currentConversation.npcName;
-                            break;
-                        }
-                    }
+                if (dialogueProgress.conversations2 && !dialogueProgress.set2point5)
+                {
+                    for (int i = 0; i < dialogueProgress.talkedTo.Length; i++)
+                    {
+                        if (currentConversation.npcName == dialogueProgress.talkedTo[i])
+                        {
+                            break;
+                        }
+                        else if (dialogueProgress.talkedTo[i] == "")
+                        {
+                            dialogueProgress.talkedTo[i] = currentConversation.npcName;
+                            break;
+                        }
+                    }
                 }
                 //
-                //To know if you talked to Harald and Gro in 2.5
-                if (currentConversation.npcName == "Harald")
-                {
-                    if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[2])
-                    {
-                        dialogueProgress.harald2point5 = true;
-                    }
-                }
-
-                else if (currentConversation.npcName == "Gro")
-                {
-                    if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[2])
-                    {
-                        dialogueProgress.gro2point5 = true;
-                    }
-                }
+                //To know if you talked to Harald and Gro in 2.5
+                if (currentConversation.npcName == "Harald")
+                {
+                    if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[2])
+                    {
+                        dialogueProgress.harald2point5 = true;
+                    }
+                }
+
+                else if (currentConversation.npcName == "Gro")
+                {
+                    if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[2])
+                    {
+                        dialogueProgress.gro2point5 = true;
+                    }
+                }
                 
                 //
                 //To move Harald past intro 2
-                if (currentConversation.npcName == "Harald")
-                {
-                    if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[3])
-                    {
-                        currentConversation.npc.inkJSONAsset = currentConversation.conversations[4];
-                    }
+                if (currentConversation.npcName == "Harald")
+                {
+                    if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[3])
+                    {
+                        currentConversation.npc.inkJSONAsset = currentConversation.conversations[4];
+                    }
                 }
                 //
                 //To check if Birger 3.5 is talked to
-                if (currentConversation.npcName == "Birger")
-                {
-                    if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[3])
-                    {
-                        dialogueProgress.birger3point5 = true;
-                    }
+                if (currentConversation.npcName == "Birger")
+                {
+                    if (currentConversation.npc.inkJSONAsset == currentConversation.conversations[3])
+                    {
+                        dialogueProgress.birger3point5 = true;
+                    }
                 }
 
 
@@ -147,7 +147,7 @@ public class DialogueManager1 : MonoBehaviour
     private void Update()
     {
         if (_isTalking)
-        {
+        {
             animator.SetBool("IsOpen", true);
             thePlayer.canMove = false;
         }
@@ -155,7 +155,7 @@ public class DialogueManager1 : MonoBehaviour
         if (!_isTalking)
         {
             animator.SetBool("IsOpen", false);
-            thePlayer.canMove = true;
+            thePlayer.canMove = true;
         }
 
 
@@ -214,18 +214,18 @@ public class DialogueManager1 : MonoBehaviour
         npcTrigerrer.SetIsTalking(false);
     }
 
-    void FindCurrentConversation()
-    {
-        if (!Found)
-        {
-            for (int i = 0; i < conversationChanger.allConversations.Length; i++)
-            {
-                if (basicInk == conversationChanger.allConversations[i].npc)
-                {
-                    currentConversation = conversationChanger.allConversations[i];
-                    Found = true;
-                }
-            }
-        }
+    void FindCurrentConversation()
+    {
+        if (!Found)
+        {
+            for (int i = 0; i < conversationChanger.allConversations.Length; i++)
+            {
+                if (basicInk == conversationChanger.allConversations[i].npc)
+                {
+                    currentConversation = conversationChanger.allConversations[i];
+                    Found = true;
+                }
+            }
+        }
     }
 }
