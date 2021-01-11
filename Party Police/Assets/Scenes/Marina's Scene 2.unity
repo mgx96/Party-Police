@@ -74540,12 +74540,12 @@ Transform:
   - {fileID: 148892203}
   - {fileID: 1660961305}
   - {fileID: 1234181822}
-  - {fileID: 1980305454}
-  - {fileID: 1983958088}
-  - {fileID: 1955330895}
-  - {fileID: 26097852}
   - {fileID: 1526269244}
+  - {fileID: 26097852}
   - {fileID: 457576642}
+  - {fileID: 1983958088}
+  - {fileID: 1980305454}
+  - {fileID: 1955330895}
   m_Father: {fileID: 155745791}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -85587,11 +85587,6 @@ MonoBehaviour:
     - {fileID: 4900000, guid: bbfcee0366104f4439dcbb608e842314, type: 3}
     - {fileID: 4900000, guid: 18aed265396c7fd4387a45f548fbd678, type: 3}
     - {fileID: 4900000, guid: a1e9207ef6ea0294ea27e5b6a7a9aacb, type: 3}
-  - npcName: Fossegrim
-    intro: {fileID: 0}
-    npc: {fileID: 0}
-    conversations:
-    - {fileID: 4900000, guid: 05acfdb18ec6a0a4e833e7dec8bc0ec9, type: 3}
   - npcName: Gro
     intro: {fileID: 4900000, guid: efdac389542800a4ea12736852378e5f, type: 3}
     npc: {fileID: 1710444080}
@@ -88690,6 +88685,10 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 187888654}
+    - target: {fileID: 8828844463773926636, guid: a8e0cf24efe04864bbe452a0e2cc91ed, type: 3}
+      propertyPath: inkJSONAsset
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8828844463773926640, guid: a8e0cf24efe04864bbe452a0e2cc91ed, type: 3}
       propertyPath: m_RootOrder
       value: 0
