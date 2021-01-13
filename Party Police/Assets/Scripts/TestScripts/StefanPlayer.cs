@@ -3,13 +3,10 @@
 public class StefanPlayer : MonoBehaviour
 {
 
-    public GameObject border;
-
     void Update()
     {
-        float xBorder = (border.transform.localScale.x)/2;
-        float yBorder = (border.transform.localScale.y)/2;
-        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -xBorder, xBorder), Mathf.Clamp(transform.position.y, -yBorder, yBorder));
+
+        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -57.2f, 90f), Mathf.Clamp(transform.position.y, -48.1f, 48.1f));
     }
 
     
