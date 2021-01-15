@@ -22,12 +22,16 @@ public class Movement : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
+    AudioSource audioSource;
+
 
     void Start()
     {
      
         anim = gameObject.GetComponent<Animator>();
         isMoving = false;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -92,6 +96,16 @@ public class Movement : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
+
+        if (isMoving)
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+        else
+            audioSource.Stop();
 
     }
 }
