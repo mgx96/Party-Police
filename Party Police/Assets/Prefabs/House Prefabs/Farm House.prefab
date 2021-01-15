@@ -1,68 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6170172920917827955
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6170172920917827952}
-  - component: {fileID: 6170172920917827953}
-  m_Layer: 0
-  m_Name: Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6170172920917827952
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6170172920917827955}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.13, y: -1.49, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6170172921184116505}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &6170172920917827953
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6170172920917827955}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 4.8036075, y: -0.42845535}
-      - {x: 5.096593, y: 0.073122025}
-      - {x: 4.844251, y: 0.3378353}
-      - {x: -5.220271, y: 0.29159144}
-      - {x: -7.435953, y: -1.4711837}
-      - {x: 4.194836, y: -1.3666265}
-      - {x: 4.122472, y: 0.012784898}
 --- !u!1 &6170172921184116507
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,6 +11,7 @@ GameObject:
   - component: {fileID: 6170172921184116505}
   - component: {fileID: 6170172921184116504}
   - component: {fileID: 6170172921184116510}
+  - component: {fileID: 8220257724992123446}
   m_Layer: 0
   m_Name: Farm House
   m_TagString: Untagged
@@ -91,8 +29,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 6.6299996, y: 4.7700005, z: 0.19483247}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 6170172920917827952}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -162,3 +99,44 @@ MonoBehaviour:
   sortingOrderBase: 5000
   offset: -2
   runOnlyOnce: 1
+--- !u!60 &8220257724992123446
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6170172921184116507}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 12.23, y: 6.04}
+    newSize: {x: 12.23, y: 6.04}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 6.0560613, y: -1.3628793}
+      - {x: -4.1778264, y: -1.3234172}
+      - {x: -6.063171, y: -2.8701217}
+      - {x: -5.245, y: -2.9299998}
+      - {x: -5.165, y: -2.9299998}
+      - {x: -5.075, y: -2.9099998}
+      - {x: -4.955, y: -2.83}
+      - {x: -4.9049997, y: -2.8999999}
+      - {x: -4.725, y: -2.87}
+      - {x: -4.595, y: -2.84}
+      - {x: 5.3108525, y: -2.8450606}
+    - - {x: 0.435, y: -2.8}
+      - {x: 0.48499998, y: -2.8}
+      - {x: 0.465, y: -2.79}
+      - {x: 0.45499998, y: -2.8}
+      - {x: 0.445, y: -2.79}
